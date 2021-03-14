@@ -55,8 +55,7 @@ margin: 20px;
 
 
 
-/* Tuneamos la barra de navegación pisando las clases del framework. */
-
+/*---------------------------NAV BAR---------------------------------*/
 .navbar {
     padding: 0;
     background: white;
@@ -67,14 +66,10 @@ margin: 20px;
     background: none;
     flex-wrap: nowrap;
 }
-
-/* Repartimos el ancho de los botones en partes iguales. */
-
 .nav-item {
     flex: 1;
     padding: 0;
 }
-
 .nav-link {
     background-color: none;
     text-align: center;
@@ -117,93 +112,3 @@ nav .nav-item:nth-of-type(1) img[src*=".svg"] {
     opacity: 1;
 }
 
-/* Seleccionamos a todas las vistas (containers con attr data-role page) por atributo/valor y las ocultamos con display none. Además les damos posicionamiento absoluto y las ubicamos en el vértice superior izquierdo de la ventana del browser y les aplicamos un margen inferior del tamaño del nav ubicado en la parte inferior de la ventana con posición fija para que no queden tapadas en su contenido. */
-
-[data-role="page"] {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 2.5rem;
-}
-
-/* Pero la vista uno le aplicamos display block para que se vea inicialmente. */
-
-
-#uno {
-    display: block;
-}
-
-/* Como la navegación es por target (o vínculo ancla) la vista en target se hace visible. */
-
-
-[data-role="page"]:target {
-    display: block;
-}
-
-/* Como se dijo, cuando carga el html la page uno aparece activa (display block) ya que debemos mostrar algo de contenido, luego, con cualquier otra page en target ocultamos la uno para que no quede por debajo de la vista en target (las demás están display none desde el comienzo). Del mismo modo que para el nav, ubicamos la vista uno por debajo de las demás para poder seleccionarla con el operador de hermanos (~). */
-
-#dos:target ~ #uno,
-#tres:target ~ #uno,
-#cuatro:target ~ #uno {
-    display: none;
-}
-
-.display-4 {
-    font-size: 2rem;
-}
-
-/* Ubicamos a la derecha el botón que abre el modal. */
-
-.btn_header {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-
-/* Le damos un tamaño a los cards de la table-responsive para que scrolleen en el eje horizontal de manera interna en la tabla. */
-
-.card_table {
-    width: 40vw;
-}
-
-/* Le aplicamos el formato al alert que trabaja como publicidad en la vista inicial. */
-
-.publicidad {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    top:0;
-    left: 0;
-    z-index: 20000;
-    border-radius: .25rem;
-    background-color: rgba(0,0,0,.5);
-}
-
-/* Modificamos el aspecto del botón de cierre del alert. */
-
-.alert .close {
-    color: white;
-    opacity: 1;
-}
-
-/* Y ajustamos el ancho máximo de la img de publicidad para que no crezca más alla de su ancho lo que la haría pixelar. */
-
-.publicidad img {
-    max-width: 100%;
-}
-
-/* Seleccionamos los párrafos de la vista 2 que tienen aplicada la clase text-truncate de BT (a los que les programamos también el click para quitarla o aplicarla en clicks sucesivos). Las propiedades comentadas son las que aplica la clase text-truncate, oculta el contenido excedente de la caja, agrega los ... cuando el texto excede en ancho a su contenedor y no permite el salto de línea del texto (nowrap) para forzarlo a exceder a su contenedor y generar el efecto. Pisamos esta última propiedad con el valor normal para que el texto no exceda el ancho del contenedor y luego aplicamos la propiedad line-clamp (del display box que es una propiedad todavía no estandar pero que los navegadores nuevos ya aplican) para determinar que el texto no pueda saltar de línea y así exceder al contenedor a partir de la línea 2, como se sigue aplicando el overflow hidden y el text-overflow desde la clase text-truncate de BT, se corta y el texto y aparecen los ... en la línea 2 (cambiando este valor se puede aplicar desde la tercera línea, cuarta, quinta, etc. */
-
-p[class="text-truncate"] {
-    /*overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;*/
-    white-space: normal !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical; 
-    
-}
