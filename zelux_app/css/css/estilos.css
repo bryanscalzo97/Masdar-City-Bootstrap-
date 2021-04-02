@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
 }
 
 /*----------------------------SPLASH---------------------------------*/
@@ -91,10 +92,15 @@ del {color: grey;
     border-radius: 0 0 10px 10px;
       
 }
+#divbanner1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
 
 #banner2 h2, #banner3 h2, #banner4 h2, #banner5 h2 {
-    padding-top: 7rem;
-    font-size: 24px;
+    padding-top: 6rem;
+    font-size: 20px;
 }
 .contb {
     padding: 1rem;
@@ -189,10 +195,47 @@ del {color: grey;
     padding: 2%;
 }
 /*--------------------------COMPRA1-----------------------------------*/
-.compra {
+#compra {
+
+    padding: 0;
+    margin: 0;
+    
+}
+#imgp {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+#botonback {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#botonback2 {
+    height: 30px;
+    width: 30px;
+
+}
+#product1 {
+    border: solid grey 0.1px;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border-radius: 3px;
+    
+
+}
+.cont1 {
+    
+    padding: 0;
+    
+
+}
+#compra1 {
+    padding: 0;
 }
 
 /*---------------------------NAV BAR---------------------------------*/
