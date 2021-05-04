@@ -3,60 +3,57 @@
     font-family: 'Mulish', sans-serif;
     
 }
-
-/*----------------------------SPLASH---------------------------------*/
-.splash{
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #343031;
-    font-size: 2em;
+/**********************Productos-Leer*********************/
+#prodleer {
     display: flex;
-    align-items: center;
     justify-content: center;
-    animation-name: open;
-    animation-duration: 2s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
+    align-items: center;
+    margin: 60px 0;
 }
-.splash img {
-margin: 20px;
-}
-.splash::after, .splash::before{
-    content: "";
-    position: absolute;
-    background-color: #343031;
-    height: 100vh;
-    width: 35vw;
-    z-index: 99;
-    animation-name: open;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-}
-.splash::after{
-    left: 30vw;
-    animation-delay: 200ms;
-}
-.splash::before{
-    left: 0;
-    animation-delay: 2s;
+#prodleer :first-child {
+    max-width: 700px;
+   
+    justify-content: center;
+    align-items: center;
+
 }
 
-@keyframes open{
-    0%{
-        transform: translate(0, 0);
-    }
-    100%{
-        transform: translate(100%, 0);
-    }
-}
-/*---------------------BARRA SUPERIOR-------*/
-#logo {
+/*************************Nav Bar **********************/
+#logo1 {
     width: 150px;
     height: 31px;
-    background: url("imagenes/logomobile.png");
+    background: url("../imgs/ZELUX.png");
+    font-size: 0;
+    position: fixed;            
+    top: 8px;
+    left: 50px;
+    z-index: 1031;
+}
+/*******************************************************/
+/****************************Footer*********************/
+footer {
+	background-color: #f8f9fa;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	padding-top: 10px;
+    padding-bottom: 5px;
+
+    
+}
+footer li{
+   display: inline;
+   text-align: center;
+    margin-right: 40px;
+    margin-bottom: 0 !important;
+}
+/*******************************************************/
+/********************BARRA SUPERIOR*********************/
+#logo {
+    width: 106px;
+    height: 48px;
+    background: url("../imgs/ZELUX.png");
     font-size: 0;
     
     /* Corregimos el posicionamiento y el z-index ya que ahora la barra queda fija. */
@@ -66,22 +63,21 @@ margin: 20px;
     left: 20px;
     z-index: 1031;
 }
-header {
- box-sizing: border-box;
- padding: 0;
- margin: 0;
- position: static;  
- background-color: #343031;
+nav.navbar {
+    background-color: #343034 !important;
+}
+/*******************************************************/
 
+body {
+    padding-top: 35px;
+    
+   
 }
-.navbarsup {
-    background-color: #343031 !important;
-}
+
+
 
 /*----------------------COLGANTES-----------*/
-#mitexto {
-    background-color: red;
-}
+
 .botoncomprar {
     background-color: #F1C96D;
     text-decoration: none;
@@ -101,6 +97,23 @@ header {
     margin-left: 0.5em;
     margin-right: 0.5em;
 
+}
+.botoncomprar2 {
+    background-color: #F1C96D;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem;
+  
+    margin: 10em 0;
+    
+
+}
+textarea {
+    margin-bottom: 1em;
+}
+input {
+    margin-bottom: 1em;
 }
 .boton2 {
     text-decoration: none;
@@ -150,6 +163,7 @@ del {color: grey;
 }
 .img1 {
     border-radius: 3px 0 0 3px;
+    
 }
 /*--------------------------COMPRA1--------------------------------*/
 #prod1{
@@ -164,8 +178,8 @@ font-weight: bold;
 /*---------------------------1ERA SECCION---------------------------*/
 
 #divbanner1 h1 {
-    background-image: url(../../imagenes/banner1.png);
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../../imagenes/banner1.png) ;
+    background-image: url(../imgs/banner1.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner1.png) ;
     background-repeat: no-repeat; background-position: center center;
     height: 35vh;
     text-align: center;
@@ -208,8 +222,8 @@ font-weight: bold;
 
 
 #banner2 {
-    background-image: url(../../imagenes/banner2.png);
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../../imagenes/banner2.png) ;
+    background-image: url(../imgs/banner2.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner2.png) ;
 
     background-repeat: no-repeat; background-position: center center;
     width: 100%;
@@ -221,8 +235,8 @@ font-weight: bold;
     padding: 0;
 }
 #banner3 {
-    background-image: url(../../imagenes/banner3.png);
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../../imagenes/banner3.png) ;
+    background-image: url(../imgs/banner3.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner3.png) ;
 
     background-repeat: no-repeat; background-position: center center;
     width: 100%;
@@ -234,8 +248,8 @@ font-weight: bold;
     padding: 0;
 }
 #banner4 {
-    background-image: url(../../imagenes/banner4.png);
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../../imagenes/banner4.png) ;
+    background-image: url(../imgs/banner4.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner4.png) ;
 
     background-repeat: no-repeat; background-position: center center;
     width: 100%;
@@ -248,7 +262,7 @@ font-weight: bold;
 }
 #banner5 {
     
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../../imagenes/banner5.png) ;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner5.png) ;
 
     background-repeat: no-repeat; background-position: center center;
     width: 100%;
@@ -329,60 +343,23 @@ font-weight: bold;
     padding: 0;
 }
 
-/*---------------------------NAV BAR---------------------------------*/
-.navbar {
-    padding: 0;
-    background: white;
+/***************************Contacto**********************/
+#formulario {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-
-.navbar-nav {
+input, textarea {
+    display: block;
     width: 100%;
-    background: none;
-    flex-wrap: nowrap;
 }
-.nav-item {
-    flex: 1;
+
+#listacontacto {
+    list-style: none;
     padding: 0;
 }
-.nav-link {
-    background-color: none;
-    text-align: center;
-}
 
-/* Le damos un tamaño a las img de los botones y les aplicamos transparencia para poner como activa solo la vista actualmente en foco de navegación con opacidad 1. */
 
-img[src*=".svg"] {
-    height: 1.25em;
-    opacity: .5;
-}
-
-/* Inicialmente, ponemos como activa la img del primer botón (la sección uno) con opacidad 1. */
-
-nav .nav-item:nth-of-type(1) img[src*=".svg"] {
-    opacity: 1;
-}
-
-/* Con cualquier page en target (los containers que tienen aplicado el attr data-role page que corresponden a cada vista de la app), pasamos a todas las img a opacidad .5 (para desmarcar la que estuviera activa ya que no sabemos cuál era). Por eso ubicamos el nav por debajo de todo el resto para poder seleccionarlo con el operador de hermanos (~). */
-
-[data-role="page"]:target ~ nav .nav-item img[src*=".svg"] {
-    opacity: .5;
-}
-
-/* Y luego evaluamos qué page está en target para marcar la img del botón correspondiente como activa con opacidad 1. */
-
-#uno:target ~ nav .nav-item:nth-of-type(1) img[src*=".svg"] {
-    opacity: 1;
-}
-
-#dos:target ~ nav .nav-item:nth-of-type(2) img[src*=".svg"] {
-    opacity: 1;
-}
-
-#tres:target ~ nav .nav-item:nth-of-type(3) img[src*=".svg"] {
-    opacity: 1;
-}
-
-#cuatro:target ~ nav .nav-item:nth-of-type(4) img[src*=".svg"] {
-    opacity: 1;
+.mg {
+	margin-bottom: 1em;
 }
 
